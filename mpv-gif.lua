@@ -6,13 +6,15 @@ local msg = require 'mp.msg'
 local utils = require 'mp.utils'
 
 -- options
+-- negative one to copy from source file
+-- outputs to the cwd
 require 'mp.options'
 local options = {
-    fps = 15,
-    width = 540,
+    fps = -1,
+    width = -1,
     height = -1,
-    extension = "mp4",
-    outputDirectory = "~/"
+    extension = "gif",
+    outputDirectory = "."
 }
 read_options(options, "gifgen")
 
